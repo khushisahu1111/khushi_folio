@@ -1,0 +1,444 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Khushi Sahu — Full-Stack & Cloud Engineer</title>
+  <meta name="description" content="Khushi Sahu — full-stack engineer building self-healing cloud infrastructure, real-time backends and AI-powered voice agents." />
+  <meta name="theme-color" content="#07070c" />
+  <meta property="og:title" content="Khushi Sahu — Full-Stack & Cloud Engineer" />
+  <meta property="og:description" content="Self-healing cloud systems, real-time backends and Voice AI." />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="is-loading">
+  <!-- ============ PRELOADER ============ -->
+  <div class="preloader" id="preloader" aria-hidden="true">
+    <div class="preloader__inner">
+      <div class="preloader__name">
+        <span>K</span><span>h</span><span>u</span><span>s</span><span>h</span><span>i</span>
+      </div>
+      <div class="preloader__bar"><span id="preloaderBar"></span></div>
+      <div class="preloader__count"><span id="preloaderCount">0</span>%</div>
+    </div>
+  </div>
+
+  <!-- ============ GLOBAL FX ============ -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursorFollower"><span id="cursorText"></span></div>
+  <div class="scroll-progress" id="scrollProgress"></div>
+  <div class="noise" aria-hidden="true"></div>
+  <div class="blobs" aria-hidden="true">
+    <span class="blob blob--1"></span>
+    <span class="blob blob--2"></span>
+    <span class="blob blob--3"></span>
+  </div>
+
+  <!-- ============ NAV ============ -->
+  <header class="nav" id="nav">
+    <a href="#top" class="nav__logo magnetic" data-cursor="Home">KS<span>.</span></a>
+    <nav class="nav__links" aria-label="Primary">
+      <a href="#about" class="nav__link" data-scramble>About</a>
+      <a href="#experience" class="nav__link" data-scramble>Experience</a>
+      <a href="#projects" class="nav__link" data-scramble>Projects</a>
+      <a href="#skills" class="nav__link" data-scramble>Skills</a>
+      <a href="#contact" class="nav__link" data-scramble>Contact</a>
+    </nav>
+    <a href="mailto:sahuk7069@gmail.com" class="btn btn--small btn--ghost magnetic nav__cta">Let's talk</a>
+    <button class="nav__burger" id="burger" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span>
+    </button>
+  </header>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#about">About</a>
+    <a href="#experience">Experience</a>
+    <a href="#projects">Projects</a>
+    <a href="#skills">Skills</a>
+    <a href="#contact">Contact</a>
+  </div>
+
+  <main id="top">
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="hero">
+      <canvas class="hero__canvas" id="heroCanvas"></canvas>
+      <div class="hero__grid" aria-hidden="true"></div>
+
+      <div class="hero__content">
+        <div class="hero__badge hero-fade">
+          <span class="pulse"></span> Open to full-time roles · 2026
+        </div>
+
+        <h1 class="hero__title">
+          <span class="line"><span class="split">Khushi</span></span>
+          <span class="line"><span class="split outline">Sahu</span></span>
+        </h1>
+
+        <p class="hero__role hero-fade">
+          Full-stack engineer building
+          <span class="rotator" id="rotator">self-healing cloud systems</span><span class="caret">|</span>
+        </p>
+
+        <div class="hero__ctas hero-fade">
+          <a href="#projects" class="btn btn--primary magnetic" data-cursor="View">
+            <span>See my work</span>
+            <svg viewBox="0 0 24 24" width="18" height="18"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <a href="#contact" class="btn btn--ghost magnetic">Get in touch</a>
+        </div>
+
+        <div class="hero__meta hero-fade">
+          <span><svg viewBox="0 0 24 24" width="14" height="14"><path d="M12 21s-7-6.2-7-11a7 7 0 1 1 14 0c0 4.8-7 11-7 11z" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="10" r="2.5" fill="currentColor"/></svg> Jhansi, Uttar Pradesh</span>
+          <span class="dot-sep"></span>
+          <span>B.Tech CSE · GLA University</span>
+        </div>
+      </div>
+
+      <div class="hero__floaters" aria-hidden="true">
+        <span class="floater" style="--x: 78%; --y: 22%;" data-depth="0.6">Python</span>
+        <span class="floater" style="--x: 86%; --y: 52%;" data-depth="1.1">AWS</span>
+        <span class="floater" style="--x: 70%; --y: 74%;" data-depth="0.8">FastAPI</span>
+        <span class="floater" style="--x: 60%; --y: 14%;" data-depth="1.3">Redis</span>
+        <span class="floater" style="--x: 92%; --y: 82%;" data-depth="0.5">LLMs</span>
+      </div>
+
+      <a href="#about" class="scroll-indicator" aria-label="Scroll to about">
+        <span class="scroll-indicator__mouse"><span></span></span>
+        <span class="scroll-indicator__text">Scroll</span>
+      </a>
+    </section>
+
+    <!-- ============ MARQUEE ============ -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <span>Python</span><i>✦</i><span>TypeScript</span><i>✦</i><span>Node.js</span><i>✦</i><span>FastAPI</span><i>✦</i><span>AWS</span><i>✦</i><span>Redis</span><i>✦</i><span>PostgreSQL</span><i>✦</i><span>Spring Boot</span><i>✦</i><span>React</span><i>✦</i><span>Docker</span><i>✦</i><span>Voice AI</span><i>✦</i>
+        <span>Python</span><i>✦</i><span>TypeScript</span><i>✦</i><span>Node.js</span><i>✦</i><span>FastAPI</span><i>✦</i><span>AWS</span><i>✦</i><span>Redis</span><i>✦</i><span>PostgreSQL</span><i>✦</i><span>Spring Boot</span><i>✦</i><span>React</span><i>✦</i><span>Docker</span><i>✦</i><span>Voice AI</span><i>✦</i>
+      </div>
+    </div>
+
+    <!-- ============ ABOUT ============ -->
+    <section class="section about" id="about">
+      <div class="section__head">
+        <span class="section__index">01</span>
+        <h2 class="section__title reveal-title">About me</h2>
+      </div>
+
+      <p class="about__lead" id="aboutLead">
+        I'm a full-stack engineer who loves owning systems end to end — from cloud infrastructure and backend APIs to real-time data pipelines. I work mostly in Python, TypeScript, Node.js and AWS, and lately I've been building LLM-powered voice agents and infrastructure that heals itself. I care about observability, reliability, and AI systems that actually scale.
+      </p>
+
+      <div class="about__grid">
+        <div class="stats">
+          <div class="stat tilt">
+            <div class="stat__num"><span class="counter" data-to="92">0</span>%</div>
+            <div class="stat__label">LLM tool-selection accuracy (up from 69%)</div>
+          </div>
+          <div class="stat tilt">
+            <div class="stat__num"><span class="counter" data-to="40">0</span>%</div>
+            <div class="stat__label">Faster deployments through automation</div>
+          </div>
+          <div class="stat tilt">
+            <div class="stat__num"><span class="counter" data-to="500">0</span>+</div>
+            <div class="stat__label">DSA problems solved on LeetCode & GFG</div>
+          </div>
+          <div class="stat tilt">
+            <div class="stat__num">Top <span class="counter" data-to="20">0</span></div>
+            <div class="stat__label">Smart India Hackathon, national finalist</div>
+          </div>
+        </div>
+
+        <div class="terminal tilt" id="terminal">
+          <div class="terminal__bar">
+            <span></span><span></span><span></span>
+            <em>khushi@portfolio: ~</em>
+          </div>
+          <pre class="terminal__body" id="terminalBody"></pre>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ EXPERIENCE ============ -->
+    <section class="section experience" id="experience">
+      <div class="section__head">
+        <span class="section__index">02</span>
+        <h2 class="section__title reveal-title">Experience</h2>
+      </div>
+
+      <div class="timeline">
+        <div class="timeline__line"><span class="timeline__fill" id="timelineFill"></span></div>
+
+        <article class="tl-item">
+          <span class="tl-item__dot"></span>
+          <div class="tl-item__card spotlight">
+            <div class="tl-item__top">
+              <div>
+                <h3>AWS Cloud Computing Intern</h3>
+                <p class="tl-item__org">
+                  JOVAC · Remote
+                  <a href="https://drive.google.com/file/d/1dvR8R7sfL5AD8Yyq2oFUf-0jWkfHh0NH/view" target="_blank" rel="noopener" class="cert-link" data-cursor="Open">Certificate ↗</a>
+                </p>
+              </div>
+              <span class="tl-item__date">Jun 2024 — Aug 2024</span>
+            </div>
+            <ul>
+              <li>Provisioned and configured AWS infrastructure (EC2, S3, IAM, VPC, CloudWatch, CloudTrail) across <b>10+ production services</b>, with monitoring, observability pipelines, SNS alerting and secure access policies for incident traceability.</li>
+              <li>Automated deployment, self-recovery and retry workflows in Python and Bash, <b>cutting deployment time by 40%</b>; built event-driven Lambda functions for incident remediation and brought in CI/CD practices.</li>
+            </ul>
+            <div class="tags"><span>AWS</span><span>Lambda</span><span>CloudWatch</span><span>Python</span><span>Bash</span><span>CI/CD</span></div>
+          </div>
+        </article>
+
+        <article class="tl-item">
+          <span class="tl-item__dot"></span>
+          <div class="tl-item__card spotlight">
+            <div class="tl-item__top">
+              <div>
+                <h3>Full Stack Developer Intern</h3>
+                <p class="tl-item__org">
+                  Baoiam · Remote
+                  <a href="https://drive.google.com/file/d/1OWfoVGx76yRLs5T-Otuz48DZrVNWet5j/view" target="_blank" rel="noopener" class="cert-link" data-cursor="Open">Certificate ↗</a>
+                </p>
+              </div>
+              <span class="tl-item__date">Jun 2023 — Aug 2023</span>
+            </div>
+            <ul>
+              <li>Built <b>8+ responsive web pages</b> and internal servicing dashboards in HTML, CSS and JavaScript, working across backend data integration and frontend rendering for CX and product teams.</li>
+              <li>Fixed <b>20+ UI issues</b> and built reusable frontend components; worked on Node.js REST API integration, code reviews and design discussions across engineering, product and CX.</li>
+            </ul>
+            <div class="tags"><span>JavaScript</span><span>Node.js</span><span>REST APIs</span><span>HTML/CSS</span></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ PROJECTS ============ -->
+    <section class="projects" id="projects">
+      <div class="projects__pin">
+        <div class="section__head projects__head">
+          <span class="section__index">03</span>
+          <h2 class="section__title reveal-title">Selected projects</h2>
+          <p class="projects__hint">Scroll to explore →</p>
+        </div>
+
+        <div class="projects__track" id="projectsTrack">
+          <article class="project tilt spotlight" data-cursor="Explore">
+            <div class="project__top">
+              <span class="project__num">01</span>
+              <span class="project__date"><span class="live-dot"></span> Aug 2026 — Present</span>
+            </div>
+            <h3 class="project__title">VoiceOps AI</h3>
+            <p class="project__subtitle">Self-healing flight support voice agent</p>
+            <div class="project__metrics">
+              <div><strong>69→92%</strong><span>tool accuracy</span></div>
+              <div><strong>0</strong><span>jobs lost on kill -9</span></div>
+              <div><strong>$0</strong><span>API cost</span></div>
+            </div>
+            <ul>
+              <li>Scoped 9 tools per conversation state to raise LLM tool-selection accuracy on a 16-case eval suite, running fully on local models.</li>
+              <li>Hand-built a Redis priority queue with atomic Lua scripts, leases and backoff retries.</li>
+              <li>Traced retries across 3 processes (88 spans) with OpenTelemetry; a code-level confirmation gate blocks unprompted cancellations.</li>
+            </ul>
+            <div class="tags"><span>Python</span><span>FastAPI</span><span>Redis</span><span>PostgreSQL</span><span>Ollama</span></div>
+          </article>
+
+          <article class="project tilt spotlight" data-cursor="Explore">
+            <div class="project__top">
+              <span class="project__num">02</span>
+              <span class="project__date">May 2026</span>
+            </div>
+            <h3 class="project__title">AI Cloud Monitor</h3>
+            <p class="project__subtitle">AI-driven monitoring & self-healing system</p>
+            <div class="project__metrics">
+              <div><strong>Real-time</strong><span>anomaly detection</span></div>
+              <div><strong>Zero-touch</strong><span>self-healing</span></div>
+            </div>
+            <ul>
+              <li>Uses CloudWatch with an LLM to detect anomalies in real time, auto-classify incidents and fire SNS alerts with Lambda-based remediation.</li>
+              <li>Event-driven retry and recovery for EC2 with scheduled snapshots and S3 lifecycle policies.</li>
+            </ul>
+            <div class="tags"><span>Python</span><span>CloudWatch</span><span>Lambda</span><span>SNS</span><span>LLM</span></div>
+          </article>
+
+          <article class="project tilt spotlight" data-cursor="Explore">
+            <div class="project__top">
+              <span class="project__num">03</span>
+              <span class="project__date">Jan 2025</span>
+            </div>
+            <h3 class="project__title">Theatrical Ticketing</h3>
+            <p class="project__subtitle">A BookMyShow-style booking platform</p>
+            <div class="project__metrics">
+              <div><strong>500+</strong><span>concurrent requests</span></div>
+              <div><strong>0</strong><span>double bookings</span></div>
+            </div>
+            <ul>
+              <li>Queue-based concurrency control with pessimistic locking (<code>SELECT FOR UPDATE</code>) and Redis-backed sessions; containerised with Docker Compose.</li>
+              <li>Real-time seat maps over Spring WebSocket (STOMP/SockJS) with no polling; stateless JWT auth, RBAC and BCrypt.</li>
+            </ul>
+            <div class="tags"><span>Spring Boot</span><span>React</span><span>WebSocket</span><span>PostgreSQL</span><span>Redis</span><span>Docker</span></div>
+          </article>
+
+          <article class="project tilt spotlight" data-cursor="Explore">
+            <div class="project__top">
+              <span class="project__num">04</span>
+              <span class="project__date">Jun 2025</span>
+            </div>
+            <h3 class="project__title">AWS Self-Healing Infra</h3>
+            <p class="project__subtitle">Event-driven cloud monitoring</p>
+            <div class="project__metrics">
+              <div><strong>Auto</strong><span>incident remediation</span></div>
+              <div><strong>Less</strong><span>manual recovery</span></div>
+            </div>
+            <ul>
+              <li>Analyses infrastructure logs from CloudWatch and CloudTrail, triggering SNS alerts and Lambda functions for incident classification and remediation.</li>
+              <li>Automated EC2 backup, retry and recovery with scheduled snapshots, S3 storage and lifecycle policies, plus observability dashboards.</li>
+            </ul>
+            <div class="tags"><span>EC2</span><span>CloudTrail</span><span>Lambda</span><span>Python</span><span>Bash</span></div>
+          </article>
+
+          <a href="https://github.com/khushisahu1111" target="_blank" rel="noopener" class="project project--more magnetic" data-cursor="GitHub">
+            <span class="project--more__circle">
+              <svg viewBox="0 0 24 24" width="40" height="40"><path d="M7 17L17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+            <span class="project--more__text">More on GitHub</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SKILLS ============ -->
+    <section class="section skills" id="skills">
+      <div class="section__head">
+        <span class="section__index">04</span>
+        <h2 class="section__title reveal-title">Toolbox</h2>
+      </div>
+
+      <div class="skills__grid">
+        <div class="skill-card spotlight">
+          <div class="skill-card__icon"><span>&lt;/&gt;</span></div>
+          <h3>Languages</h3>
+          <div class="chips"><span>Python</span><span>TypeScript</span><span>JavaScript (ES6+)</span><span>Java</span><span>SQL</span><span>C</span></div>
+        </div>
+        <div class="skill-card spotlight">
+          <div class="skill-card__icon"><span>◧</span></div>
+          <h3>Full stack</h3>
+          <div class="chips"><span>Node.js</span><span>FastAPI</span><span>Flask</span><span>Spring Boot</span><span>Express.js</span><span>React.js</span><span>Next.js</span><span>REST APIs</span><span>WebSocket</span><span>Tailwind CSS</span><span>Shadcn UI</span></div>
+        </div>
+        <div class="skill-card spotlight">
+          <div class="skill-card__icon"><span>☁</span></div>
+          <h3>AI & cloud</h3>
+          <div class="chips"><span>LLM Integration</span><span>Voice AI (STT/TTS)</span><span>AWS EC2 · S3 · IAM · VPC</span><span>CloudWatch</span><span>Lambda</span><span>SNS</span><span>Docker</span><span>CI/CD</span><span>Kubernetes/EKS</span></div>
+        </div>
+        <div class="skill-card spotlight">
+          <div class="skill-card__icon"><span>⛁</span></div>
+          <h3>Data & systems</h3>
+          <div class="chips"><span>PostgreSQL</span><span>MySQL</span><span>Redis</span><span>MongoDB</span><span>Appwrite</span><span>DSA</span><span>OOP</span><span>DBMS</span><span>OS</span><span>Networks</span><span>System Design</span></div>
+        </div>
+        <div class="skill-card spotlight">
+          <div class="skill-card__icon"><span>⚙</span></div>
+          <h3>Tools</h3>
+          <div class="chips"><span>Git</span><span>Linux</span><span>Postman</span><span>Maven</span><span>IntelliJ IDEA</span><span>VS Code</span></div>
+        </div>
+      </div>
+
+      <div class="marquee marquee--big" aria-hidden="true">
+        <div class="marquee__track marquee__track--slow">
+          <span>Observability</span><i>●</i><span>Reliability</span><i>●</i><span>Self-healing</span><i>●</i><span>Real-time</span><i>●</i><span>End-to-end ownership</span><i>●</i>
+          <span>Observability</span><i>●</i><span>Reliability</span><i>●</i><span>Self-healing</span><i>●</i><span>Real-time</span><i>●</i><span>End-to-end ownership</span><i>●</i>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ EDUCATION & ACHIEVEMENTS ============ -->
+    <section class="section journey" id="journey">
+      <div class="section__head">
+        <span class="section__index">05</span>
+        <h2 class="section__title reveal-title">Education & wins</h2>
+      </div>
+
+      <div class="journey__grid">
+        <div class="journey-card journey-card--edu spotlight tilt">
+          <span class="journey-card__kicker">Education</span>
+          <h3>GLA University</h3>
+          <p>B.Tech in Computer Science & Engineering</p>
+          <div class="journey-card__foot">
+            <span>Mathura, UP</span>
+            <span>Aug 2022 — Jun 2026</span>
+          </div>
+          <div class="journey-card__ring" aria-hidden="true"></div>
+        </div>
+
+        <div class="journey-card spotlight tilt">
+          <span class="journey-card__kicker">🏆 Hackathon</span>
+          <h3>Smart India Hackathon</h3>
+          <p>Top 20 finalist team nationally.</p>
+        </div>
+
+        <div class="journey-card spotlight tilt">
+          <span class="journey-card__kicker">⚡ Problem solving</span>
+          <h3>500+ DSA problems</h3>
+          <p>Solved on LeetCode and GeeksforGeeks.</p>
+        </div>
+
+        <div class="journey-card journey-card--wide spotlight tilt">
+          <span class="journey-card__kicker">📜 Certifications</span>
+          <div class="certs">
+            <span>Full Stack Web Development · Dev Town</span>
+            <span>Agile Scrum & Six Sigma White Belt</span>
+            <span>AWS Cloud Computing · JOVAC</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section class="contact" id="contact">
+      <div class="contact__glow" aria-hidden="true"></div>
+      <p class="contact__kicker"><span class="section__index">06</span> What's next?</p>
+      <h2 class="contact__title">
+        <span class="line"><span class="split">Let's build</span></span>
+        <span class="line"><span class="split gradient-text">something great.</span></span>
+      </h2>
+      <p class="contact__text">I'm looking for full-time roles in backend, cloud and AI engineering. If you have a role, a project or just want to talk systems, my inbox is open.</p>
+
+      <button class="contact__email magnetic" id="copyEmail" data-email="sahuk7069@gmail.com" data-cursor="Copy">
+        <span class="contact__email-text">sahuk7069@gmail.com</span>
+        <span class="contact__email-icon">
+          <svg viewBox="0 0 24 24" width="22" height="22"><rect x="9" y="9" width="12" height="12" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+        </span>
+      </button>
+
+      <div class="socials">
+        <a href="mailto:sahuk7069@gmail.com" class="social magnetic" aria-label="Email">
+          <svg viewBox="0 0 24 24" width="22" height="22"><rect x="3" y="5" width="18" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><path d="M3 7l9 6 9-6" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+          <span>Email</span>
+        </a>
+        <a href="https://www.linkedin.com/in/khushi-sahu-1742a8241/" target="_blank" rel="noopener" class="social magnetic" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" width="22" height="22"><path fill="currentColor" d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05C20.6 8.65 21 11.2 21 14.5V21h-4v-5.7c0-1.36-.03-3.1-1.9-3.1-1.9 0-2.2 1.48-2.2 3v5.8H9z"/></svg>
+          <span>LinkedIn</span>
+        </a>
+        <a href="https://github.com/khushisahu1111" target="_blank" rel="noopener" class="social magnetic" aria-label="GitHub">
+          <svg viewBox="0 0 24 24" width="22" height="22"><path fill="currentColor" d="M12 .5A11.5 11.5 0 0 0 8.36 22.9c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.53-1.33-1.28-1.69-1.28-1.69-1.05-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.68 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.41-2.69 5.39-5.25 5.67.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5z"/></svg>
+          <span>GitHub</span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span>© <span id="year"></span> Khushi Sahu</span>
+    <span class="footer__time">Local time in India · <span id="localTime">--:--</span></span>
+    <a href="#top" class="footer__top magnetic" aria-label="Back to top">↑</a>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite">Email copied to clipboard ✓</div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
